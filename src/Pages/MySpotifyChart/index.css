@@ -1,0 +1,7 @@
+.ui.unstackable.items>.item>.image {
+  display: flex;
+}
+.ui.unstackable.items>.item>.image, .ui.unstackable.items>.item>.image>img {
+    width: 40px!important;
+    object-fit: contain;
+}
