@@ -8,18 +8,24 @@ import 'semantic-ui-css/semantic.min.css';
 import ErrorBoundary from 'ErrorBoundary';
 import GlobalLoadingIndicator from 'GlobalLoadingIndicator';
 import AppRoutes from 'Routes';
+import { StyledWrapper, GlobalStyle } from 'style';
 
 ReactDOM.render(
-  <ErrorBoundary>
-    <BrowserRouter>
-      <ApiErrorProvider>
-        <Auth>
-          <AppRoutes />
-        </Auth>
-        <ApiErrorNotification />
-        <GlobalLoadingIndicator />
-      </ApiErrorProvider>
-    </BrowserRouter>
-  </ErrorBoundary>,
+  <>
+    <GlobalStyle />
+    <StyledWrapper>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <ApiErrorProvider>
+            <Auth>
+              <AppRoutes />
+            </Auth>
+            <ApiErrorNotification />
+            <GlobalLoadingIndicator />
+          </ApiErrorProvider>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </StyledWrapper>
+  </>,
   document.getElementById('root'),
 );

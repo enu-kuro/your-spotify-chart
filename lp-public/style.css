@@ -1,0 +1,85 @@
+:root{
+	--link:#000; 
+	--hover:#b00;
+	--main:rgb(0, 0, 0);
+	--bg:rgb(237, 126, 126);
+	--size:99vmin;
+	--ratio: 1 / 1.1;
+	font-size: calc(var(--size) / 100);
+}
+html {
+	height: 100%;
+  }
+
+body{
+	margin-top:10vh;
+	padding:0;
+	height: 100vh;
+	overflow: hidden;
+	background-color: var(--bg);
+	font-family: 'Montserrat', sans-serif;
+	color: var(--main);
+}
+
+.container{
+	width: calc(var(--size) * var(--ratio));
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.intro{
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	font-size: 4rem;	
+	font-weight: bold;
+}
+
+.intro-title{
+	color: var(--main);
+	font-size: 9rem;
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	margin-top: 10vmin;
+}
+
+.memo{
+	font-weight: normal;
+	font-size: 2rem;
+	/* line-height: 2.2rem; */
+	
+}
+.btn{
+	text-decoration: none;
+	display: inline-block;
+	/* padding: 10px 20px; */
+	text-align: center;
+	font-size: 5rem;
+	cursor: pointer;
+	background-color: var(--main);
+	color: var(--bg);
+	border-radius: 500px;
+	/* font-weight: 700; */
+	letter-spacing: 2px;
+	padding: 3rem 5rem;
+	margin-bottom: 10px;
+	transition: transform  3ms ease-in-out;
+}
+
+.btn:hover {
+	transform: scale(1.05); /* (150% zoom)*/
+	
+  }
+
+.github{
+	margin-top: 50px;
+	font-size: 2rem;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+	text-align: center;
+	font-size: 2rem;
+}
